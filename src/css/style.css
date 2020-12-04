@@ -1,0 +1,115 @@
+body {
+    font-family: -apple-system, "Segoe UI", Helvetica, sans-serif;
+    font-size: 18px;
+    color: #123;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 16px;
+    overflow-y: scroll;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 64px;
+}
+
+.header__site-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color .12s;
+}
+
+.header__site-link:hover {
+    color: #e00;
+}
+
+.header__site-link span {
+    display: block;
+    padding: 0 0 5px 1px;
+}
+
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+
+.toc {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.toc li {
+    margin: 0 0 32px;
+    padding: 0;
+    list-style: none;
+}
+.toc a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.toc h2 {
+    margin: 0;
+    font-size: 18px;
+    transition: color .12s;
+}
+
+.toc a:hover h2 {
+    color: #e00;
+}
+
+.toc p { /* article date */
+    margin: 0;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   Article & Defaults
+   ========================================================================== */
+
+h1 {
+    margin: 0 0 4px;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+h6 { /* article date */
+    margin: 0 0 32px;
+    font-size: .9em;
+    font-weight: normal;
+}
+
+h2 {
+    margin: 2em 0 1em;
+}
+
+p {
+    margin: 1.2em 0;
+}
+
+blockquote {
+    border-left: 3px solid #102030;
+    margin: 1.2em 0 1.2em .1em;
+    padding: .2em 0 .2em 1em;
+}
+
+blockquote p {
+    margin: 0 0 1em;
+}
+
+blockquote p:last-child {
+    margin: 0;
+}
