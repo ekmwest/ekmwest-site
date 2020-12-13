@@ -66,7 +66,7 @@ body {
     transition: color .12s;
 }
 
-.toc a:hover h2 {
+.toc a:hover {
     color: #e00;
 }
 
@@ -93,7 +93,9 @@ h6 { /* article date */
 }
 
 h2 {
-    margin: 2em 0 1em;
+    margin: 3em 0 .5em;
+    font-size: 1.1em;
+
 }
 
 p {
@@ -112,4 +114,8 @@ blockquote p {
 
 blockquote p:last-child {
     margin: 0;
+}
+
+li {
+    margin-bottom: .4em;
 }
