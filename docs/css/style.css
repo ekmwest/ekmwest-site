@@ -1,10 +1,11 @@
 body {
     font-family: -apple-system, "Segoe UI", Helvetica, sans-serif;
     font-size: 18px;
-    color: #123;
+    color: #222;
+    line-height: 1.5;
     max-width: 640px;
     margin: 0 auto;
-    padding: 16px;
+    padding: 16px 16px 64px;
     overflow-y: scroll;
 }
 
