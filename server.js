@@ -1,5 +1,5 @@
-import * as path from "https://deno.land/std@0.74.0/path/mod.ts";
-import { sideServe } from "https://cdn.jsdelivr.net/gh/ekmwest/side@1.1.1/mod.js";
+import * as path from "https://deno.land/std@0.81.0/path/mod.ts";
+import { sideServe } from "https://cdn.jsdelivr.net/gh/ekmwest/side@1.1.3/mod.js";
 
 const rootPath = Deno.cwd();
 const sourcePath = path.join(rootPath, 'src');
