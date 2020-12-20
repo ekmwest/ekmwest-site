@@ -1,8 +1,3 @@
-import { path, sideServe } from "./deps.js";
+import { buildAndServe } from "https://cdn.jsdelivr.net/gh/ekmwest/piko@0.0.3/mod.js";
 
-const rootPath = Deno.cwd();
-const sourcePath = path.join(rootPath, 'src');
-const targetPath = path.join(rootPath, 'docs');
-const componentsPath = path.join(sourcePath, 'components');
-
-sideServe(sourcePath, targetPath, componentsPath);
+buildAndServe();
