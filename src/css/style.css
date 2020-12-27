@@ -73,30 +73,31 @@ body {
     margin: 0;
     font-size: 15px;
     font-size: .8em;
+    font-weight: 600;
+    color: #aaa;
 }
 
 /* ==========================================================================
    Article & Defaults
    ========================================================================== */
 
-h1 {
-    margin: 0 0 4px;
-    font-size: 2em;
-    font-weight: bold;
-    line-height: 1.1;
+h6 { /* article date */
+    margin: 0 0 3em;
+    font-size: .7em;
+    font-weight: 600;
+    color: #999;
 }
 
-h6 { /* article date */
-    margin: 0 0 32px;
-    font-size: .8em;
-    font-weight: normal;
-    color: #777;
+h1 {
+    margin: 0 0 1.1em;
+    font-size: 2.2em;
+    font-weight: bold;
+    line-height: 1.1;
 }
 
 h2 {
     margin: 3em 0 .5em;
     font-size: 1.1em;
-
 }
 
 p {
