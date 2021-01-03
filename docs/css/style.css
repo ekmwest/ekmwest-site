@@ -139,3 +139,7 @@ blockquote p:last-child {
 li {
     margin-bottom: .4em;
 }
+
+a {
+    color: #0377f1;
+}
