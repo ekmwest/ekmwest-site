@@ -1,6 +1,6 @@
 <!-- header.html, {title: 'The Parenting Paradox'} -->
 
-###### 13 December 2020
+###### DECECMBER 13, 2020
 
 # The Parenting Paradox 
 

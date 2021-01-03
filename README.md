@@ -1,1 +1,1 @@
-Repos for [ekmwest.net](https://ekmwest.net)
+Repo for [ekmwest.net](https://ekmwest.net)

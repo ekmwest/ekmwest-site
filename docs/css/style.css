@@ -3,10 +3,14 @@ body {
     font-size: 18px;
     color: #222;
     line-height: 1.5;
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 16px 16px 64px;
+    margin: 0;
+    padding: 48px 48px 128px;
     overflow-y: scroll;
+    transition: padding .2s;
+}
+
+.is-mobile body {
+    padding: 24px 24px 128px;
 }
 
 /* ==========================================================================
@@ -15,26 +19,38 @@ body {
 
 .header {
     display: flex;
-    justify-content: center;
     margin: 0 0 64px;
+    transition: margin .2s;
+}
+
+.is-mobile .header {
+    margin: 0 0 48px;
 }
 
 .header__site-link {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: inherit;
-    font-size: 24px;
-    font-weight: bold;
+    color: #0377f1;
+    padding: 2px;
+    transition: color .3s;
 }
 
 .header__site-link:hover {
-    color: #f50000;
+    color: #333;
 }
 
-.header__site-link span {
-    display: block;
-    padding: 0 0 5px 1px;
+.header__site-link svg {
+    height: 20px;
+}
+
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+.main {
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 /* ==========================================================================
@@ -49,7 +65,7 @@ body {
 }
 
 .toc li {
-    margin: 0 0 32px;
+    margin: 0 0 24px;
     padding: 0;
     list-style: none;
 }
@@ -58,6 +74,7 @@ body {
     text-decoration: none;
     display: inline-flex;
     flex-direction: column;
+    transition: color .2s;
 }
 
 .toc h2 {
@@ -66,15 +83,15 @@ body {
 }
 
 .toc a:hover {
-    color: #f50000;
+    color: #0377f1;
 }
 
 .toc p { /* article date */
     margin: 0;
-    font-size: 15px;
     font-size: .8em;
-    font-weight: 600;
-    color: #aaa;
+    font-weight: 400;
+    color: #bcbfc5;
+    font-family: monospace;
 }
 
 /* ==========================================================================
@@ -82,14 +99,15 @@ body {
    ========================================================================== */
 
 h6 { /* article date */
-    margin: 0 0 3em;
-    font-size: .7em;
-    font-weight: 600;
-    color: #999;
+    margin: 0 2px 1em;
+    font-size: .8em;
+    font-weight: 400;
+    font-family: monospace;
+    color: #bcbfc5;
 }
 
 h1 {
-    margin: 0 0 1.1em;
+    margin: 0 0 .9em;
     font-size: 2.2em;
     font-weight: bold;
     line-height: 1.1;
