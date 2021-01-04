@@ -1,3 +1,6 @@
+// Include without defer, async, or type="module". This is
+// to make sure css class is set before first render.
+
 (function () {
     const MOBILE_WIDTH = 768;
 
