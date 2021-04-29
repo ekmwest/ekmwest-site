@@ -118,12 +118,12 @@ h1 {
 }
 
 h2 {
-    margin: 3em 0 .5em;
+    margin: 2em 0 .5em;
     font-size: 1.1em;
 }
 
 p {
-    margin: 1.2em 0;
+    margin: 0 0 1.2em;
 }
 
 blockquote {
