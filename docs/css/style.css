@@ -33,7 +33,7 @@ body {
     text-decoration: none;
     color: #0377f1;
     padding: 2px;
-    transition: color .3s;
+    transition: color .1s;
 }
 
 .header__site-link:hover {
@@ -41,7 +41,7 @@ body {
 }
 
 .header__site-link svg {
-    height: 20px;
+    height: 24px;
 }
 
 .header__site-link span {
@@ -78,12 +78,12 @@ body {
     text-decoration: none;
     display: inline-flex;
     flex-direction: column;
-    transition: color .2s;
+    transition: color .1s;
 }
 
 .toc h2 {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .toc a:hover {
@@ -94,7 +94,7 @@ body {
     margin: 0;
     font-size: .8em;
     font-weight: 400;
-    color: #bcbfc5;
+    color: #a8abb3;
     font-family: monospace;
 }
 
@@ -107,7 +107,7 @@ h6 { /* article date */
     font-size: .8em;
     font-weight: 400;
     font-family: monospace;
-    color: #bcbfc5;
+    color: #a8abb3;
 }
 
 h1 {

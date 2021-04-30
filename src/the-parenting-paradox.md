@@ -13,6 +13,6 @@ The purpose of parenting is teaching children how to become successful. Paradoxi
 5. Their children have a different definition of success.
 6. Their children don't want to be taught.
 
-This paradox is not limited to parenting. It applies to advicing and counseling in general.
+The Parenting Paradox is not limited to parenting. It applies to advicing and counseling in general.
 
 <!-- footer.html -->
