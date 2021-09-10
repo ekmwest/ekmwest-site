@@ -69,7 +69,7 @@ body {
 }
 
 .toc li {
-    margin: 0 0 24px;
+    margin: 0 0 32px;
     padding: 0;
     list-style: none;
 }
@@ -78,7 +78,6 @@ body {
     text-decoration: none;
     display: inline-flex;
     flex-direction: column;
-    transition: color .1s;
 }
 
 .toc h2 {
@@ -103,7 +102,7 @@ body {
    ========================================================================== */
 
 h6 { /* article date */
-    margin: 0 2px 1em;
+    margin: 0 3px .2em;
     font-size: .8em;
     font-weight: 400;
     font-family: monospace;
@@ -118,8 +117,8 @@ h1 {
 }
 
 h2 {
-    margin: 2em 0 .5em;
-    font-size: 1.1em;
+    margin: 2em 0 .1em;
+    font-size: 1.06em;
 }
 
 p {
