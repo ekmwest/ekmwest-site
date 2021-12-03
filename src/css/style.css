@@ -19,12 +19,13 @@ body {
 
 .header {
     display: flex;
-    margin: 0 0 64px;
+    margin: 0 auto 64px;
     transition: margin .2s;
+    max-width: 640px;
 }
 
 .is-mobile .header {
-    margin: 0 0 48px;
+    margin: 0 auto 48px;
 }
 
 .header__site-link {
@@ -33,7 +34,7 @@ body {
     text-decoration: none;
     color: #0377f1;
     padding: 2px;
-    transition: color .1s;
+    /* transition: color .1s; */
 }
 
 .header__site-link:hover {
