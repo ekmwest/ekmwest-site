@@ -1,12 +1,22 @@
 <!-- header.html, {title: 'Identity Instrumentalization'} -->
 
-###### DECECMBER 4, 2021
+###### DECECMBER 20, 2021
 
-# Identity Instrumetalization
+# Identity Instrumentalization
 
-Until you've become what you want to become, you pretend.
+Identity is valuable only as a goal. As something to aspire to become.
 
-Once you've reached 
+Once achieved, and recognized by professional peers, identity becomes shackles.
+
+
+
+But once you've reach a certain level, once you've become what you want to become, your identity will confine you.
+
+You must shred your identity and transform it to an instrument.
+
+Once you've become a leader, you must begin thinking of leadership as an instrument to serve others.
+
+You have to run to stand still.
 
 
 <!-- footer.html -->

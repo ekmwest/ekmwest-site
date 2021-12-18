@@ -4,11 +4,11 @@
 
 # The Inverse Perception Equality
 
-It looks like the sun is rotating around earth.
+It looks like the sun is in orbit around earth.
 
 Or does it?
 
-What *would* it have looked like if the inverse was true — what would it have looked like if earth was rotating around the sun?
+What *would* it have looked like if the inverse was true — if earth was orbiting the sun?
 
 Does it look like that other train is moving — or does it look like it's *your* train that's moving? What exactly is your perception telling you?
 
