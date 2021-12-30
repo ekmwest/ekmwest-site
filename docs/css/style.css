@@ -4,13 +4,8 @@ body {
     color: #222;
     line-height: 1.5;
     margin: 0;
-    padding: 96px 48px 128px;
+    padding: 0 24px 128px;
     overflow-y: scroll;
-    transition: padding .2s;
-}
-
-.is-mobile body {
-    padding: 64px 24px 128px;
 }
 
 
@@ -21,13 +16,8 @@ body {
 
 .header {
     display: flex;
-    margin: 0 auto 64px;
-    transition: margin .2s;
+    margin: clamp(2em, 4vw, 4em) auto clamp(2em, 4vw, 4em);
     max-width: 640px;
-}
-
-.is-mobile .header {
-    margin: 0 auto 48px;
 }
 
 .header__site-link {
@@ -87,8 +77,9 @@ body {
 }
 
 .toc h2 {
-    margin: 0;
+    margin: 0 0 .3em;
     font-size: 20px;
+    line-height: 1.1;
 }
 
 .toc a:hover {
