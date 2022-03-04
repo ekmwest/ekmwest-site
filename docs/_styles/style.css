@@ -34,6 +34,7 @@ body {
 
 .header__site-link svg {
     height: 24px;
+    height: 32px;
 }
 
 .header__site-link span {
@@ -90,7 +91,7 @@ body {
     margin: 0;
     font-size: .8em;
     font-weight: 400;
-    color: #a8abb3;
+    color: #73757b;
     font-family: monospace;
 }
 
@@ -105,7 +106,7 @@ h6 { /* article date */
     font-size: .8em;
     font-weight: 400;
     font-family: monospace;
-    color: #a8abb3;
+    color: #73757b;
 }
 
 h1 {

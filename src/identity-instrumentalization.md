@@ -1,4 +1,8 @@
-<!-- header.html, {title: 'Identity Instrumentalization'} -->
+---
+layout: master.html
+title: Identity Instrumentalization
+robots: noindex
+---
 
 ###### DECECMBER 20, 2021
 
@@ -17,6 +21,3 @@ You must shred your identity and transform it to an instrument.
 Once you've become a leader, you must begin thinking of leadership as an instrument to serve others.
 
 You have to run to stand still.
-
-
-<!-- footer.html -->

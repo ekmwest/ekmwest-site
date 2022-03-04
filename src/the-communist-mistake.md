@@ -1,4 +1,7 @@
-<!-- header.html, {title: 'The Communist Mistake'} -->
+---
+layout: master.html
+title: The Communist Mistake
+---
 
 ###### APRIL 29, 2021
 
@@ -14,6 +17,4 @@ Clearly, in many situations, facts can be known. The sun will rise tomorrow and 
 
 There's no reason to expect that the universe should behave in an analytically predictable manner. Expect the opposite. Assume that no plan survives contact with the enemy. Assume that fact can't be known.
 
-Don't make the Communist Mistake. 
-
-<!-- footer.html -->
+Don't make the Communist Mistake.
