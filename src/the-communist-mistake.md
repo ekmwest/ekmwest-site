@@ -1,9 +1,8 @@
 ---
 layout: post.html
 title: The Communist Mistake
+time: APRIL 29, 2021
 ---
-
-###### APRIL 29, 2021
 
 The Communist Mistake is to assume that facts can be known.
 

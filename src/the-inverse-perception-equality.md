@@ -1,9 +1,8 @@
 ---
 layout: post.html
 title: The Inverse Perception Equality
+time: DECECMBER 1, 2021
 ---
-
-###### DECECMBER 1, 2021
 
 It looks like the sun is orbiting earth.
 

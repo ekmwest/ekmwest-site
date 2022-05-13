@@ -1,16 +1,13 @@
 ---
 layout: post.html
 title: Identity Instrumentalization
+time: DECECMBER 20, 2021
 robots: noindex
 ---
-
-###### DECECMBER 20, 2021
 
 Identity is valuable only as a goal. As something to aspire to become.
 
 Once achieved, and recognized by professional peers, identity becomes shackles.
-
-
 
 But once you've reach a certain level, once you've become what you want to become, your identity will confine you.
 

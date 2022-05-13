@@ -1,10 +1,9 @@
 ---
 layout: post.html
 title: The Status Trap
+time: JANUARY 1, 2022
 robots: noindex
 ---
-
-###### JANUARY 1, 2022
 
 As you develop your expertise, you'll successfully think and operate on a higher level. This is natural, but there's a risk.
 
