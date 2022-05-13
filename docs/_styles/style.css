@@ -101,7 +101,8 @@ body {
    Article & Defaults
    ========================================================================== */
 
-h6 { /* article date */
+time { /* article date */
+    display: block;
     margin: 0 3px .2em;
     font-size: .8em;
     font-weight: 400;
