@@ -1,7 +1,7 @@
 ---
 layout: post.html
 title: Identity Instrumentalization
-time: DECECMBER 20, 2021
+time: December 20, 2021
 robots: noindex
 ---
 

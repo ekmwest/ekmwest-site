@@ -108,6 +108,7 @@ time { /* article date */
     font-weight: 400;
     font-family: monospace;
     color: #73757b;
+    text-transform: uppercase;
 }
 
 h1 {
