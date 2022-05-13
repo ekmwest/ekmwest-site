@@ -1,5 +1,5 @@
 ---
-layout: master.html
+layout: post.html
 title: Identity Instrumentalization
 robots: noindex
 ---

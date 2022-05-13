@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title || ekmwest }}</title>
+    <meta name="robots" content="{{ robots || index }}" />
+    <meta name="description" content="Unlearning analytical thinking">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/svg+xml" href="/_images/site-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/_styles/style.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <a class="header__site-link" href="/" aria-label="Home">
+            <!-- site-logo.svg -->
+        </a>
+    </header>
+
+    <main class="main">
+        {{ content }}
+    </main>
+
+</body>
+
+</html>
