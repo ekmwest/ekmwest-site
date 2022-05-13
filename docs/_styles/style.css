@@ -16,7 +16,7 @@ body {
 
 .header {
     display: flex;
-    margin: clamp(2em, 4vw, 4em) auto clamp(2em, 4vw, 4em);
+    margin: clamp(2em, 4vw, 4em) auto clamp(3em, 4vw, 4em);
     max-width: 640px;
 }
 
@@ -34,7 +34,7 @@ body {
 
 .header__site-link svg {
     height: 24px;
-    height: 32px;
+    height: 18px;
 }
 
 .header__site-link span {
