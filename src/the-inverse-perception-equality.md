@@ -5,8 +5,6 @@ title: The Inverse Perception Equality
 
 ###### DECECMBER 1, 2021
 
-# The Inverse Perception Equality
-
 It looks like the sun is orbiting earth.
 
 Or does it?

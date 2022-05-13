@@ -5,8 +5,6 @@ title: The Parenting Paradox
 
 ###### DECECMBER 13, 2020
 
-# The Parenting Paradox 
-
 The purpose of parenting is teaching children how to become successful. Paradoxically, success cannot be taught.
 
 1. By their own estimate, most parents aren't successful.

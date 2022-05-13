@@ -6,8 +6,6 @@ robots: noindex
 
 ###### DECECMBER 20, 2021
 
-# Identity Instrumentalization
-
 Identity is valuable only as a goal. As something to aspire to become.
 
 Once achieved, and recognized by professional peers, identity becomes shackles.

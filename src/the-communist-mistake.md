@@ -5,8 +5,6 @@ title: The Communist Mistake
 
 ###### APRIL 29, 2021
 
-# The Communist Mistake
-
 The Communist Mistake is to assume that facts can be known.
 
 *Planned economy* is a clarifying example. No person or organization can predict the complex interactions between capital, resources, labor, intellectual property, and distribution. Planned economy is a mistake because it assumes that facts about the future can be known.
