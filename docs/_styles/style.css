@@ -70,6 +70,7 @@ body {
     padding: 0;
     list-style: none;
 }
+
 .toc a {
     color: inherit;
     text-decoration: none;
@@ -87,7 +88,8 @@ body {
     color: #0377f1;
 }
 
-.toc p { /* article date */
+.toc p {
+    /* article date */
     margin: 0;
     font-size: .8em;
     font-weight: 400;
@@ -101,7 +103,8 @@ body {
    Article & Defaults
    ========================================================================== */
 
-time { /* article date */
+time {
+    /* article date */
     display: block;
     margin: 0 3px .2em;
     font-size: .8em;
@@ -147,4 +150,37 @@ li {
 
 a {
     color: #0377f1;
+}
+
+
+
+/* ==========================================================================
+   Lightning
+   ========================================================================== */
+
+.lightning {
+    font-size: 1.2em;
+    margin: 1.1em 0;
+}
+
+.lightning svg {
+    display: inline-block;
+    padding: .8em;
+    margin-left: -.8em;
+}
+
+.lightning svg:hover {
+    animation: 1.2s ease lightning;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes lightning {
+    from {
+        transform: scale(1.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }

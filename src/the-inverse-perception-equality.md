@@ -8,7 +8,7 @@ It looks like the sun is orbiting earth.
 
 Or does it?
 
-What *would* it have looked like if it was the other way around? What would it have looked like if earth was spinning around the sun?
+What *would* it have looked like if it was the other way around? What would it have looked like if our planet was spinning around the sun?
 
 Does it look like that other train is moving — or does it look like it's *your* train that's moving? What exactly is your perception telling you?
 
