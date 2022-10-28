@@ -10,9 +10,9 @@ Or does it?
 
 What *would* it have looked like if it was the other way around? What would it have looked like if earth was spinning around the sun?
 
-Does it look like the other train is moving — or does it look like it's *your* train that's moving? What exactly is your perception telling you?
+Does it look like that other train is moving — or does it look like it's *your* train that's moving? What exactly is your perception telling you?
 
-Your friend might seem closed-minded when dismissing a book you want to discuss. What if the book is crap? Are you dismissing your friend's dismissal?
+Your friend might seem closed-minded when dismissing a book you want to discuss. But what if the book is crap? Are you dismissing your friend's dismissal?
 
 Telling others to "*wake up*" doesn't mean you're not sleeping.
 
