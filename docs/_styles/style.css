@@ -1,7 +1,33 @@
+/* ==========================================================================
+   Color Schema
+   ========================================================================== */
+
+html {
+    --bg-color: #fff;
+    --text-color: #222;
+    --text-color-muted: #888;
+    --lightning-blue: #0377f1;
+}
+
+html.dark {
+    --bg-color: #272727;
+    --text-color: #eee;
+    --text-color-muted: #aaa;
+    --lightning-blue: #4da3fe;
+    --lightning-blue: #2991ff;
+}
+
+
+
+/* ==========================================================================
+   Body
+   ========================================================================== */
+
 body {
     font-family: -apple-system, "Segoe UI", Helvetica, sans-serif;
     font-size: 18px;
-    color: #222;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.5;
     margin: 0;
     padding: 0 24px 128px;
@@ -16,6 +42,7 @@ body {
 
 .header {
     display: flex;
+    justify-content: space-between;
     margin: clamp(2em, 4vw, 4em) auto clamp(3em, 4vw, 4em);
     max-width: 640px;
 }
@@ -24,21 +51,48 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #0377f1;
+    color: var(--lightning-blue);
     padding: 2px 0;
 }
 
-.header__site-link:hover {
-    color: #333;
-}
-
 .header__site-link svg {
-    height: 24px;
     height: 18px;
 }
 
 .header__site-link span {
     display: none;
+}
+
+
+
+/* ==========================================================================
+   Toggle Dark Mode
+   ========================================================================== */
+
+.toggle-dark-mode {
+    appearance: none;
+    padding: 8px;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.toggle-dark-mode .sun {
+    display: block;
+}
+
+.dark .toggle-dark-mode .sun {
+    display: none;
+}
+
+.toggle-dark-mode .moon {
+    display: none;
+}
+
+.dark .toggle-dark-mode .moon {
+    display: block;
 }
 
 
@@ -82,18 +136,18 @@ body {
     margin: 0 0 .3em;
     font-size: 20px;
     line-height: 1.1;
+    border-bottom: 1px solid transparent;
 }
 
-.toc a:hover {
-    color: #0377f1;
+.toc a:hover h2 {
+    text-decoration: underline;
 }
 
 .toc p {
-    /* article date */
     margin: 0;
     font-size: .8em;
     font-weight: 400;
-    color: #73757b;
+    color: var(--text-color-muted);
     font-family: monospace;
 }
 
@@ -110,7 +164,7 @@ time {
     font-size: .8em;
     font-weight: 400;
     font-family: monospace;
-    color: #73757b;
+    color: var(--text-color-muted);
     text-transform: uppercase;
 }
 
@@ -149,7 +203,7 @@ li {
 }
 
 a {
-    color: #0377f1;
+    color: var(--lightning-blue);
 }
 
 
@@ -177,7 +231,7 @@ a {
 
 @keyframes lightning {
     from {
-        transform: scale(1.8);
+        transform: scale(1.4);
     }
 
     to {
