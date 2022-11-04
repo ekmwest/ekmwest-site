@@ -40,6 +40,10 @@
         }
 
         function toggleDarkMode() {
+            const initialTransitionValue = document.body.style.transition;
+
+            document.body.style.transition = 'background-color .2s, color .2s';
+
             if (isDarkMode()) {
                 document.documentElement.classList.remove('dark');
                 localStorage.setItem('dark-mode', 'false');
@@ -47,6 +51,10 @@
                 document.documentElement.classList.add('dark');
                 localStorage.setItem('dark-mode', 'true');
             }
+
+            setTimeout(() => {
+                document.body.style.transition = initialTransitionValue;
+            }, 1000)
         }
 
         if (isDarkMode()) {
