@@ -31,7 +31,7 @@ body {
     color: var(--text-color);
     line-height: 1.5;
     margin: 0;
-    padding: 0 24px 128px;
+    padding: 0 18px 128px;
     overflow-y: scroll;
 }
 
@@ -219,14 +219,16 @@ body {
 
 .thought-experiments h1 {
     text-align: center;
-    margin: 0 0 0.1em 0;
-    font-size: 3em;
+    margin: 0 0 0.3em 0;
+    font-size: 2.5em;
+    line-height: 1;
 }
 
 .thought-experiments .preamble {
     text-align: center;
     margin-bottom: 3em;
     font-size: 1.2em;
+    line-height: 1.2;
 }
 
 .thought-experiments__content {
@@ -236,9 +238,9 @@ body {
 
 .thought-experiments__content > div {
     background-color: var(--bg-color-muted);
-    padding: .7em 1em 1em 1.1em;
+    padding: .7em 1em .9em 1.1em;
     border-radius: .4em;
-    margin-bottom: 1em;
+    margin-bottom: 1.1em;
 }
 
 .thought-experiments time {
