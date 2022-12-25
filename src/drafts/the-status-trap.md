@@ -1,7 +1,7 @@
 ---
 layout: post.html
 title: The Status Trap
-time: January 1, 2022
+time: XX, 2023
 robots: noindex
 ---
 
