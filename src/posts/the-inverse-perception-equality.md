@@ -8,12 +8,10 @@ It looks like the sun is orbiting earth.
 
 Or does it?
 
-What *would* it have looked like if it was the other way around? What would it have looked like if our planet was spinning around the sun?
+*What would it have looked like* if it was the other way around? What would it have looked like if earth was spinning around the sun?
 
 Does it look like that other train is moving — or does it look like it's *your* train that's moving? What exactly is your perception telling you?
 
-Your friend might seem closed-minded when dismissing a book you want to discuss. But what if the book is crap? Are you dismissing your friend's dismissal?
-
-Telling others to "*wake up*" doesn't mean you're not sleeping.
+Your friend might seem closed-minded when dismissing a book you want to discuss. But perhaps it's you that's dismissing your friend's dismissal. Telling others to *"wake up"* doesn't mean you're not sleeping.
 
 Ask yourself, if the inverse of your preception was true, what would it have looked like?
