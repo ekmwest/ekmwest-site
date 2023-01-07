@@ -4,8 +4,6 @@ title: Short Thoughts 2022
 time: Dec 31, 2022
 ---
 
-<link rel="stylesheet" href="/_styles/short-thoughts.css" />
-
 <div class="short-thoughts">
 
 Facts can conceal the truth.
@@ -36,6 +34,6 @@ Kindness is partly a decision, but primarily a skill. This is profoundly counter
 
 Don't try to understand reality. Instead, try to understand how your perspective shapes the way you understand reality.
 
-The master walks his own path. If you want to follow the master, find your own path.
+The master walks his own path. If you want to follow the master, don't follow the master.
 
 </div>

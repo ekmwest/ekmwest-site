@@ -4,8 +4,6 @@ title: Short Thoughts 2020
 time: Dec 31, 2020
 ---
 
-<link rel="stylesheet" href="/_styles/short-thoughts.css" />
-
 <div class="short-thoughts">
 
 Stone and chisel will produce sharp writing.

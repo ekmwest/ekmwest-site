@@ -4,8 +4,6 @@ title: Short Thoughts 2021
 time: Dec 31, 2021
 ---
 
-<link rel="stylesheet" href="/_styles/short-thoughts.css" />
-
 <div class="short-thoughts">
 
 Good intuitions feels exactly the same as bad intuitions.
