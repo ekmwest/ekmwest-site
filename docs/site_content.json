@@ -12,7 +12,7 @@
         "content": "XX, 2023 Identity Instrumentalization Identity is valuable only as a goal. As something to aspire to become. Once achieved, and recognized by professional peers, identity becomes shackles. But once you&#39;ve reach a certain level, once you&#39;ve become what you want to become, your identity will confine you. You must shred your identity and transform it to an instrument. Once you&#39;ve become a leader, you must begin thinking of leadership as an instrument to serve others. You have to run to stand still."
     },
     {
-        "title": "EKMWEST",
+        "title": "ekmwest",
         "description": "",
         "url": "/drafts/index.html",
         "content": "Drafts Anti-Intuition XX, 2023 Identity Instrumentalization XX, 2023 The Status Trap XX, 2023"
@@ -24,10 +24,16 @@
         "content": "XX, 2023 The Status Trap As you develop your expertise, you&#39;ll successfully think and operate on a higher level. This is natural, but there&#39;s a risk. If you move too fast, you can get lost."
     },
     {
-        "title": "EKMWEST",
+        "title": "ekmwest",
         "description": "",
         "url": "/index.html",
-        "content": "DEC 31, 2022 Short Thoughts 2022 OCT 23, 2022 The Control Paradox DEC 31, 2021 Short Thoughts 2021 DEC 1, 2021 The Inverse Perception Equality SEP 10, 2021 The Closed-Minded Symmetry APR 29, 2021 The Communist Mistake DEC 31, 2020 Short Thoughts 2020 DEC 13, 2020 The Parenting Problem DEC 31, 2019 Short Thoughts 2019"
+        "content": "JAN 8, 2023 Ergodicity --> DEC 31, 2022 Short Thoughts 2022 OCT 23, 2022 The Control Paradox DEC 31, 2021 Short Thoughts 2021 DEC 1, 2021 The Inverse Perception Equality SEP 10, 2021 The Closed-Minded Symmetry APR 29, 2021 The Communist Mistake DEC 31, 2020 Short Thoughts 2020 DEC 13, 2020 The Parenting Problem DEC 31, 2019 Short Thoughts 2019"
+    },
+    {
+        "title": "Ergodicity",
+        "description": "",
+        "url": "/posts/ergodicity.html",
+        "content": "Jan 8, 2023 Ergodicity Here's a simple game: You have some amount of wealth. A fair coin is tossed. On heads, your wealth increases 50%. On tails, your wealth decreases 40%. If you play this game repeatedly many times, your wealth will change randomly. But how, exactly, will it randomly change? This type of dynamic change is called a \"random walk\", or more specifically, a \"geometric brownian motion\". Let's analyze and simulate this geometric brownian motion in some different ways. Analysis and simulations Enseble average An average player will gain 5% wealth on each round (each coin toss):EA = (1.5 + 0.6) / 2 = 1.05 Let's simulate an average player. Here we use 10,000 players (an ensemble) and run the game for 10 rounds. The vertical axis shows average wealth on a log scale: Run Simulation Again Time average If you would participate in the game, you wouldn't be an average player. You would be an individual player and should, on average, loose 5% wealth on each round:TA = (1.5 * 0.6) / 2 = 0.95 Let's simulatate an individual player. Here we use one single player and run the game 10,000 rounds. The vertical axis shows wealth on a log scale: Run Simulation Again Conclusion Because the ensemble average is not equal to the time average, the game is non-ergodic. The game might seem favourable at first, and for the average player, it is. But for an individual player, the ensemble average is not relevant. It would be irrational to participate. The Kelly Fraction Let's slightly modify the game so that a player can choose the amount to bet on each round. In this new scenario, it's in fact possible for an individual player to \"get access\" to some of the ensemble gains. The optimal amount to bet is calculated by the Kelly Fraction:KF = P/A - Q/B P = Probabilty of winQ = Probability of lossA = Fraction lost on lossB = Fraction gained on win For our game, the Kelly Fraction is:KF = 0.5/0.4 - 0.5/0.5 = 0.25 Let's run the time average simulation again, but this time using the Kelly Fraction. Here we use a single player making a 25% bet in 10,000 rounds. The vertical axis shows wealth on log scale: Run Simulation Again Simulation Code The simulation code is published here: https://github.com/ekmwest/gbm-simulation/blob/main/app.js"
     },
     {
         "title": "",
@@ -63,30 +69,30 @@
         "title": "The Closed-Minded Symmetry",
         "description": "",
         "url": "/posts/the-closed-minded-symmetry.html",
-        "content": "September 10, 2021 The Closed-Minded Symmetry If A regards B as closed-minded, it&#39;s typically true that B regards A as closed-minded."
+        "content": "Sep 10, 2021 The Closed-Minded Symmetry If A regards B as closed-minded, it&#39;s typically true that B regards A as closed-minded."
     },
     {
         "title": "The Communist Mistake",
         "description": "",
         "url": "/posts/the-communist-mistake.html",
-        "content": "April 29, 2021 The Communist Mistake The Communist Mistake is to assume that facts can be known. Planned economy is a clarifying example. No person or organization can predict the complex interactions between capital, resources, labor, intellectual property, and distribution. Planned economy is a mistake because it assumes that facts about the future can be known. A market economy isn&#39;t planned. It&#39;s not based on facts. Technological advancements, and changes in consusumer demands, are met by opportunistic companies. Each individual company has a plan of course. But the market itself doesn&#39;t. Clearly, in many situations, facts can be known. The sun will rise tomorrow and you&#39;re reading this paragraph right now. But be aware — looks can be decieving. Newton&#39;s law of gravity describes a simple relationship between moving bodies, but a system with more than just two bodies is impossible to analytically predict. What looks simple might not be so. There&#39;s no reason to expect that the universe should behave in an analytically predictable manner. You should expect the opposite. Assume that no plan survives contact with the enemy. Assume that facts can&#39;t be known. Don&#39;t make the Communist Mistake."
+        "content": "Apr 29, 2021 The Communist Mistake The Communist Mistake is to assume that facts can be known. Planned economy is a clarifying example. No person or organization can predict the complex interactions between capital, resources, labor, intellectual property, and distribution. Planned economy is a mistake because it assumes that facts about the future can be known. A market economy isn&#39;t planned. It&#39;s not based on facts. Technological advancements, and changes in consusumer demands, are met by opportunistic companies. Each individual company has a plan of course. But the market itself doesn&#39;t. Clearly, in many situations, facts can be known. The sun will rise tomorrow and you&#39;re reading this paragraph right now. But be aware — looks can be decieving. Newton&#39;s law of gravity describes a simple relationship between moving bodies, but a system with more than just two bodies is impossible to analytically predict. What looks simple might not be so. There&#39;s no reason to expect that the universe should behave in an analytically predictable manner. You should expect the opposite. Assume that no plan survives contact with the enemy. Assume that facts can&#39;t be known. Don&#39;t make the Communist Mistake."
     },
     {
         "title": "The Control Paradox",
         "description": "",
         "url": "/posts/the-control-paradox.html",
-        "content": "October 23, 2022 The Control Paradox If you wish to control something, you need to understand it. But in order to understand something, you must let go of your wish to control it."
+        "content": "Oct 23, 2022 The Control Paradox If you wish to control something, you need to understand it. But in order to understand something, you must let go of your wish to control it."
     },
     {
         "title": "The Inverse Perception Equality",
         "description": "",
         "url": "/posts/the-inverse-perception-equality.html",
-        "content": "December 1, 2021 The Inverse Perception Equality It looks like the sun is orbiting earth. Or does it? What would it have looked like if it was the other way around? What would it have looked like if earth was spinning around the sun? Does it look like that other train is moving — or does it look like it&#39;s your train that&#39;s moving? What exactly is your perception telling you? Your friend might seem closed-minded when dismissing a topic you want to discuss. But perhaps it&#39;s you that&#39;s dismissing your friend&#39;s dismissal. Telling others to &quot;wake up&quot; doesn&#39;t mean you&#39;re not sleeping. Ask yourself, if the inverse of your preception was true, what would it have looked like?"
+        "content": "Dec 1, 2021 The Inverse Perception Equality It looks like the sun is orbiting earth. Or does it? What would it have looked like if it was the other way around? What would it have looked like if earth was spinning around the sun? Does it look like that other train is moving — or does it look like it&#39;s your train that&#39;s moving? What exactly is your perception telling you? Your friend might seem closed-minded when dismissing a topic you want to discuss. But perhaps it&#39;s you that&#39;s dismissing your friend&#39;s dismissal. Telling others to &quot;wake up&quot; doesn&#39;t mean you&#39;re not sleeping. Ask yourself, if the inverse of your preception was true, what would it have looked like?"
     },
     {
         "title": "The Parenting Problem",
         "description": "",
         "url": "/posts/the-parenting-problem.html",
-        "content": "December 13, 2020 The Parenting Problem The purpose of parenting is teaching children how to become successful. The problem is, success cannot be taught: By their own estimate, most parents aren&#39;t successful. Successful parents don&#39;t really understand what made them successful. Whatever made them successful is not relevant today. Whatever made them successful is not relevant to their children. Their children have a different definition of success. Their children don&#39;t want to be taught. The Parenting Problem is not limited to parenting. It applies to mentoring and teaching in general."
+        "content": "Dec 13, 2020 The Parenting Problem The purpose of parenting is teaching children how to become successful. The problem is, success cannot be taught: By their own estimate, most parents aren&#39;t successful. Successful parents don&#39;t really understand what made them successful. Whatever made them successful is not relevant today. Whatever made them successful is not relevant to their children. Their children have a different definition of success. Their children don&#39;t want to be taught. The Parenting Problem is not limited to parenting. It applies to mentoring and teaching in general."
     }
 ]

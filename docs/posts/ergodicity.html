@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-<title>The Communist Mistake</title>
+<title>Ergodicity</title>
 <meta name="robots" content="index" />
 <meta name="description" content="Unlearning analytical thinking">
 <link rel="shortcut icon" type="image/svg+xml" href="/_images/site-icon.svg" />
@@ -75,15 +75,91 @@
 
     <main class="main post">
         <article>
-            <time>Apr 29, 2021</time>
-            <h1>The Communist Mistake</h1>
-            <p>The Communist Mistake is to assume that facts can be known.</p>
-<p><em>Planned economy</em> is a clarifying example. No person or organization can predict the complex interactions between capital, resources, labor, intellectual property, and distribution. Planned economy is a mistake because it assumes that facts about the future can be known.</p>
-<p>A <em>market economy</em> isn&#39;t planned. It&#39;s not based on facts. Technological advancements, and changes in consusumer demands, are met by opportunistic companies. Each individual company has a plan of course. But the market itself doesn&#39;t.</p>
-<p>Clearly, in many situations, facts can be known. The sun will rise tomorrow and you&#39;re reading this paragraph right now. But be aware — looks can be decieving. Newton&#39;s law of gravity describes a simple relationship between moving bodies, but a system with more than just two bodies is impossible to analytically predict. What looks simple might not be so.</p>
-<p>There&#39;s no reason to expect that the universe should behave in an analytically predictable manner. You should expect the opposite. Assume that no plan survives contact with the enemy. Assume that facts can&#39;t be known.</p>
-<p>Don&#39;t make the Communist Mistake.</p>
+            <time>Jan 8, 2023</time>
+            <h1>Ergodicity</h1>
+            <p>Here's a simple game:
+<ol>
+    <li>You have some amount of wealth.</li>
+    <li>A fair coin is tossed.</li>
+    <li>On heads, your wealth increases 50%.</li>
+    <li>On tails, your wealth decreases 40%.</li>
+</ol>
+</p>
 
+<p>If you play this game repeatedly many times, your wealth will change randomly. But how, exactly, will it randomly change?</p>
+
+<p>This type of dynamic change is called a <em>"random walk"</em>, or more specifically, a <em>"geometric brownian motion"</em>. Let's analyze and simulate this geometric brownian motion in some different ways.</p>
+
+
+
+<h2>Analysis and simulations</h2>
+
+<h3>Enseble average</h3>
+
+<p>An average player will gain 5% wealth on each round (each coin toss):<br /><span class="math">EA = (1.5 + 0.6) / 2 = 1.05</span></p>
+
+<p>Let's simulate an average player. Here we use 10,000 players (an ensemble) and run the game for 10 rounds. The vertical axis shows average wealth on a log scale:</p>
+
+<div id="ensembleSimulation" class="graph"></div>
+
+<button type="button" name="btnEnsebleSimulation">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+    </svg>
+    <span>Run Simulation Again</span>
+</button>
+
+
+
+<h3>Time average</h3>
+
+<p>If you would participate in the game, you wouldn't be an average player. You would be an <em>individual</em> player and should, on average, <em>loose</em> 5% wealth on each round:<br /><span class="math">TA = (1.5 * 0.6) / 2 = 0.95</span></p>
+
+<p>Let's simulatate an individual player. Here we use one single player and run the game 10,000 rounds. The vertical axis shows wealth on a log scale:</p>
+
+<div id="timeSimulation" class="graph"></div>
+
+<button type="button" name="btnTimeSimulation">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+    </svg>
+    <span>Run Simulation Again</span>
+</button>
+
+
+
+<h2>Conclusion</h2>
+
+<p>Because the ensemble average is not equal to the time average, the game is <em>non-ergodic</em>. The game might seem favourable at first, and for the average player, it is. But for an individual player, the ensemble average is not relevant. It would be irrational to participate.</p>
+
+
+
+<h2>The Kelly Fraction</h2>
+
+<p>Let's slightly modify the game so that a player can choose the amount to bet on each round. In this new scenario, it's in fact possible for an individual player to "get access" to some of the ensemble gains. The optimal amount to bet is calculated by the Kelly Fraction:<br /><span class="math">KF = P/A - Q/B</span></p>
+
+<p><strong>P</strong> = Probabilty of win<br /><strong>Q</strong> = Probability of loss<br /><strong>A</strong> = Fraction lost on loss<br /><strong>B</strong> = Fraction gained on win</p>
+
+<p>For our game, the Kelly Fraction is:<br /><span class="math">KF = 0.5/0.4 - 0.5/0.5 = 0.25</span></p>
+
+<p>Let's run the time average simulation again, but this time using the Kelly Fraction. Here we use a single player making a 25% bet in 10,000 rounds. The vertical axis shows wealth on log scale:</p>
+
+<div id="kellySimulation" class="graph"></div>
+
+<button type="button" name="btnKellySimulation">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+    </svg>
+    <span>Run Simulation Again</span>
+</button>
+
+
+
+<h2>Simulation Code</h2>
+
+<p>The simulation code is published here:<br />
+    <a target="_blank" href="https://github.com/ekmwest/gbm-simulation/blob/main/app.js">https://github.com/ekmwest/gbm-simulation/blob/main/app.js</a>
+</p>
             <p class="lightning">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z" />

@@ -1,7 +1,7 @@
 ---
 layout: post.html
 title: The Parenting Problem
-time: December 13, 2020
+time: Dec 13, 2020
 ---
 
 The purpose of parenting is teaching children how to become successful. The problem is, success cannot be taught:
