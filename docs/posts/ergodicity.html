@@ -362,7 +362,7 @@
     }
 </style>
 
-<p>I'm not that confident about the meanings and implications of ergodicity. But the concept is sufficiently counter-intuitive to make it interesting to me.</p>
+<p>I'm not at all that confident about the meanings and implications of ergodicity. But the concept is sufficiently counter-intuitive to make it interesting to me.</p>
 
 <p>In this article I'll try to explain ergodicity, as far as I understand it, based on a simple game:</p>
 
@@ -423,11 +423,11 @@
 
 <p>To end this article, I'd like to take the opportunity to explain the <em>"Kelly Fraction"</em>.</p>
 
-<p>The Kelly Fraction is used in finance and investment. It's rather abstract and typically difficult to understand, but based on our understanding of ergodicity from this article, I believe we can reach a simple description.</p>
+<p>The Kelly Fraction is used in finance and investment. It's rather abstract and typically difficult to understand, but based on our understanding of ergodicity in this article, I believe we can reach a simple description.</p>
 
-<p>Let's slightly modify the game so that a player can choose the amount to bet on each round. In this new scenario, it is in fact possible for an individual player to "get access" to some of the ensemble gains. The optimal amount to bet is calculated by the Kelly Fraction:<br /><span class="math">KF = P/A - Q/B</span></p>
+<p>Let's slightly modify the game so that a player can choose the amount to bet in each round. In this new scenario, it's in fact possible for an individual player to "get access" to some of the ensemble gains. The optimal amount to bet is calculated by the Kelly Fraction:<br /><span class="math">KF = P/A - Q/B</span></p>
 
-<p><strong>P</strong> = Probabilty of win<br /><strong>Q</strong> = Probability of loss<br /><strong>A</strong> = Fraction lost on loss<br /><strong>B</strong> = Fraction gained on win</p>
+<p><strong>P</strong> = Probabilty of win<br /><strong>A</strong> = Fraction lost on loss<br /><strong>Q</strong> = Probability of loss<br /><strong>B</strong> = Fraction gained on win</p>
 
 <p>For our game, the Kelly Fraction is:<br /><span class="math">KF = 0.5/0.4 - 0.5/0.5 = 0.25</span></p>
 
@@ -446,6 +446,10 @@
 
 <h2>Further Reading</h2>
 
+<p>Theoretical Physicist Ph.D. Ole Peters have explained the concept of ergodicity in multiple tweets, talks, and articles. Here's one of his best TED Talks (16 min):<br>
+    <a target="_blank" href="https://www.youtube.com/watch?v=LGqOH3sYmQA">Time and Chance</a>
+</p>
+
 <p>Founder and investor Taylor Pearson have put together a great description of ergodicity in this article (~4000 words):<br>
     <a target="_blank" href="https://taylorpearson.me/ergodicity/">A Big Little Idea Called Ergodicity</a>
 </p>
@@ -454,11 +458,7 @@
     <a target="_blank" href="https://www.youtube.com/watch?v=FYtp6rDAmoU">A creative springboard to a better kind of economics</a>
 </p>
 
-<p>Theoretical Physicist Ph.D. Ole Peters have explained the concept of ergodicity in multiple articles, tweets, and articles. Here's one of his best TED Talks (16 min):<br>
-    <a target="_blank" href="https://www.youtube.com/watch?v=LGqOH3sYmQA">Time and Chance</a>
-</p>
-
-<p>The simulation code used in this article can be found here:<br />
+<p>The simulation algorithms used in this article (~200 LOC):<br />
     <a target="_blank" href="https://github.com/ekmwest/ekmwest-site/blob/master/src/posts/ergodicity.html">github.com/ekmwest/ekmwest-site/src/posts/ergodicity.html</a>
 </p>
             <p class="lightning">
