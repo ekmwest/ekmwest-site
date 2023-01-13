@@ -1,67 +1,356 @@
 ---
 layout: post.html
 title: Ergodicity
-time: Jan 8, 2023
+time: Jan 13, 2023
 ---
 
-<p>Here's a simple game:
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+
+    /*  =====================================================================
+        Constants
+        ===================================================================== */
+
+    const INITIAL_WEALTH = 1;
+
+    const PROBABILITY_OF_WIN = 0.5;
+    const PROBABILITY_OF_LOSS = 1 - PROBABILITY_OF_WIN;
+
+    const WEALTH_CHANGE_ON_WIN = 1.5;
+    const WEALTH_CHANGE_ON_LOSS = 0.6;
+
+    const ENSEMBLE_SIMULATION_ROUNDS = 10;
+    const ENSEMBLE_SIMULATION_POPULATION = 10000;
+
+    const TIME_SIMULATION_ROUNDS = 10000;
+
+    const KELLY_BET = PROBABILITY_OF_WIN / (1 - WEALTH_CHANGE_ON_LOSS) - PROBABILITY_OF_LOSS / (WEALTH_CHANGE_ON_WIN - 1);
+
+
+
+    /*  =====================================================================
+        Simulations
+        ===================================================================== */
+
+    function ensembleSimulation() {
+
+        // 1. Run Ensemble Simulations
+
+        const ensembleSimulations = [];
+
+        for (let i = 0; i < ENSEMBLE_SIMULATION_POPULATION; i++) {
+            ensembleSimulations.push(
+                simulateBrownianMotion(
+                    INITIAL_WEALTH,
+                    ENSEMBLE_SIMULATION_ROUNDS,
+                    WEALTH_CHANGE_ON_WIN,
+                    WEALTH_CHANGE_ON_LOSS
+                ));
+        }
+
+        // 2. Compute Ensemble Average
+
+        const ensembleAverage = [];
+
+        for (let r = 0; r <= ENSEMBLE_SIMULATION_ROUNDS; r++) {
+            let totalWealth = 0;
+
+            for (let p = 0; p < ENSEMBLE_SIMULATION_POPULATION; p++) {
+                totalWealth += ensembleSimulations[p][r][1];
+            }
+
+            const averageWealth = totalWealth / ENSEMBLE_SIMULATION_POPULATION;
+
+            ensembleAverage.push([r, averageWealth]);
+        }
+
+        return ensembleAverage;
+    }
+
+
+    function timeSimulation() {
+        const timeSimulation = simulateBrownianMotion(
+            INITIAL_WEALTH,
+            TIME_SIMULATION_ROUNDS,
+            WEALTH_CHANGE_ON_WIN,
+            WEALTH_CHANGE_ON_LOSS
+        );
+
+        return timeSimulation;
+    }
+
+
+    function kellySimulation() {
+        const kellySimulation = simulateBrownianMotion(
+            INITIAL_WEALTH,
+            TIME_SIMULATION_ROUNDS,
+            WEALTH_CHANGE_ON_WIN,
+            WEALTH_CHANGE_ON_LOSS,
+            KELLY_BET
+        );
+
+        return kellySimulation;
+    }
+
+
+
+    /*  =====================================================================
+        Simulate Brownian Motion
+        ===================================================================== */
+
+    function simulateBrownianMotion(startValue, rounds, changeOnWin, changeOnLoss, bet = 1) {
+        const randomWalk = [[0, startValue]]; // Initial Data Point
+
+        for (let i = 1; i <= rounds; i++) {
+            const valueFromPreviousRound = randomWalk[i - 1][1];
+
+            if (Math.random() < 0.5) {
+                randomWalk.push([i, valueFromPreviousRound * bet * changeOnWin + valueFromPreviousRound * (1 - bet)]);
+            } else {
+                randomWalk.push([i, valueFromPreviousRound * bet * changeOnLoss + valueFromPreviousRound * (1 - bet)]);
+            }
+        }
+
+        return randomWalk;
+    }
+
+
+
+    /*  =====================================================================
+        Render Simulations
+        ===================================================================== */
+
+    function renderEnsembleSimulation() {
+        const simulationData = ensembleSimulation();
+
+        simulationData.unshift(['Round', 'Wealth']); // Labels
+
+        const chartData = google.visualization.arrayToDataTable(simulationData);
+        const chartOtions = createChartOptions(null, [1, 2])
+        const chart = new google.visualization.LineChart(document.getElementById('ensembleSimulation'));
+
+        chart.draw(chartData, chartOtions);
+    }
+
+
+    function renderTimeSimulation() {
+        const simulationData = timeSimulation();
+
+        simulationData.unshift(['Round', 'Wealth']); // Labels
+
+        const chartData = google.visualization.arrayToDataTable(simulationData);
+        const chartOtions = createChartOptions(null, [0, 1])
+        const chart = new google.visualization.LineChart(document.getElementById('timeSimulation'));
+
+        chart.draw(chartData, chartOtions);
+    }
+
+
+    function renderKellySimulation() {
+        const simulationData = kellySimulation();
+
+        simulationData.unshift(['Round', 'Wealth']); // Labels
+
+        const chartData = google.visualization.arrayToDataTable(simulationData);
+        const chartOtions = createChartOptions(null, [0, 1])
+        const chart = new google.visualization.LineChart(document.getElementById('kellySimulation'));
+
+        chart.draw(chartData, chartOtions);
+    }
+
+
+    /*  =====================================================================
+        Chart Helpers
+        ===================================================================== */
+
+    function createChartOptions(title, ticks) {
+        const textColor = isDarkMode() ? '#fff' : '#000';
+
+        return {
+            title: title,
+            curveType: 'function',
+            colors: ['#1d77f4'],
+            backgroundColor: 'transparent',
+            width: chartWidth(),
+            height: chartHeight(),
+            legend: 'none',
+            chartArea: { 'width': '93%', 'height': '80%' },
+            hAxis: {
+                title: null,
+                textStyle: { color: textColor },
+            },
+            vAxis: {
+                title: null,
+                textPosition: 'none',
+                scaleType: 'log',
+                ticks: ticks,
+                gridlines: {color: textColor},
+                textStyle: { color: textColor }
+            }
+        };
+    }
+
+    function chartWidth() {
+        const mainElement = document.querySelector('main');
+        return mainElement.clientWidth;
+    }
+
+    function chartHeight() {
+        return chartWidth() * 0.4;
+    }
+
+
+
+    /*  =====================================================================
+        Event Handlers
+        ===================================================================== */
+
+    window.addEventListener('load', renderEnsembleSimulation);
+    window.addEventListener('load', renderTimeSimulation);
+    window.addEventListener('load', renderKellySimulation);
+
+    document.addEventListener('click', event => {
+        switch (event.target.name) {
+            case 'btnEnsebleSimulation':
+                renderEnsembleSimulation();
+                break;
+            case 'btnTimeSimulation':
+                renderTimeSimulation();
+                break;
+            case 'btnKellySimulation':
+                renderKellySimulation();
+                break;
+        }
+    });
+
+
+
+    /*  =====================================================================
+        Load Chart Library
+        ===================================================================== */
+
+    google.charts.load('current', { 'packages': ['corechart'] });
+
+</script>
+
+<style>
+    .math {
+        display: inline-block;
+        font-family: monospace;
+        font-size: .9em;
+        padding: 8px 12px;
+        margin-top: 10px;
+        background-color: var(--bg-color-muted);
+        font-weight: 600;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    .graph {
+        margin: 1em auto .8em;
+        padding: 0 0 10px;
+        border-radius: 2px;
+        background-color: var(--bg-color-muted);
+    }
+
+    .reload-button {
+        background-color: var(--lightning-blue);
+        color: #fff;
+        border: none;
+        padding: 8px 14px;
+        display: flex;
+        justify-content: center;
+        gap: .6em;
+        margin: 0 auto;
+        cursor: pointer;
+        border-radius: 2em;
+        font: inherit;
+        font-size: .8em;
+        transition: background-color .08s;
+    }
+
+    .reload-button:hover {
+        background-color: var(--lightning-blue);
+    }
+
+    .reload-button:active {
+        background-color: var(--lightning-blue);
+    }
+
+    .reload-button svg {
+        height: 1.3em;
+        pointer-events: none;
+    }
+
+    .reload-button span {
+        pointer-events: none;
+        line-height: 1.3;
+        font-weight: 600;
+    }
+</style>
+
+<p>I'm not that confident about the meanings and implications of ergodicity. But the concept is sufficiently counter-intuitive to make it interesting to me.</p>
+
+<p>In this article I'll try to explain ergodicity based on a simple game:</p>
+
 <ol>
     <li>You have some amount of wealth.</li>
     <li>A fair coin is tossed.</li>
     <li>On heads, your wealth increases 50%.</li>
     <li>On tails, your wealth decreases 40%.</li>
 </ol>
-</p>
-
-<p>If you play this game repeatedly many times, your wealth will change randomly. But how, exactly, will it randomly change?</p>
-
-<p>This type of dynamic change is called a <em>"random walk"</em>, or more specifically, a <em>"geometric brownian motion"</em>. Let's analyze and simulate this geometric brownian motion in some different ways.</p>
 
 
 
-<h2>Analysis and simulations</h2>
+<h2>Ensemble Average</h2>
 
-<h3>Enseble average</h3>
+<p>First, let's see what happens on average when many players participate in the game. An average player should gain 5% wealth on each round (on each coin toss):<br /><span class="math">EA = (1.5 + 0.6) / 2 = 1.05</span></p>
 
-<p>An average player will gain 5% wealth on each round (each coin toss):<br /><span class="math">EA = (1.5 + 0.6) / 2 = 1.05</span></p>
-
-<p>Let's simulate an average player. Here we use 10,000 players (an ensemble) and run the game for 10 rounds. The vertical axis shows average wealth on a log scale:</p>
+<p>Just to verify the formula, let's simulate an average player. Here we use 10,000 players (an ensemble) and run the game for 10 rounds. The vertical axis shows average wealth on a log scale:</p>
 
 <div id="ensembleSimulation" class="graph"></div>
 
-<button type="button" name="btnEnsebleSimulation">
+<button class="reload-button" type="button" name="btnEnsebleSimulation">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
     </svg>
-    <span>Run Simulation Again</span>
+    <span>Reload</span>
 </button>
 
 
 
-<h3>Time average</h3>
+<h2>Time Average</h2>
 
-<p>If you would participate in the game, you wouldn't be an average player. You would be an <em>individual</em> player and should, on average, <em>loose</em> 5% wealth on each round:<br /><span class="math">TA = (1.5 * 0.6) / 2 = 0.95</span></p>
+<p>Now let's take the perspective of an individual player. An individual player should, on average, loose 5% wealth on each round:<br /><span class="math">TA = (1.5 * 0.6) / 2 = 0.95</span></p>
 
-<p>Let's simulatate an individual player. Here we use one single player and run the game 10,000 rounds. The vertical axis shows wealth on a log scale:</p>
+<p>To verify the formula, let's simulatate an individual player. Here we use one single player and run the game 10,000 rounds. The vertical axis shows wealth on a log scale:</p>
 
 <div id="timeSimulation" class="graph"></div>
 
-<button type="button" name="btnTimeSimulation">
+<button class="reload-button" type="button" name="btnTimeSimulation">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
     </svg>
-    <span>Run Simulation Again</span>
+    <span>Reload</span>
 </button>
 
 
 
-<h2>Conclusion</h2>
+<h2>Defining Ergodicity</h2>
 
-<p>Because the ensemble average is not equal to the time average, the game is <em>non-ergodic</em>. The game might seem favourable at first, and for the average player, it is. But for an individual player, the ensemble average is not relevant. It would be irrational to participate.</p>
+<p>Ergodicity have <a href="https://en.wikipedia.org/wiki/Ergodicity#Occurrence" target="_blank">different meanings in different contexts</a>, but here's a commonly used defintion for our case:<br><span class="math">A process is ergodic if the ensemble average is equal to the time average.</span></p>
+
+<p>Based on this definition, we can conclude that our game is non-ergodic — the ensemble average is <strong>not</strong> equal to the time average.</p>
+
+<p>What I find counter-intuitive is that sometimes it's rational for a group (an ensemble) to participate in a game, but at the same time, irrational for an individual player. How can this be? I understand the math, but on an emotional level, it seems paradoxical.</p>
 
 
 
 <h2>The Kelly Fraction</h2>
+
+<p>To end this article, I'd like to take the opportunity to explain the <em>"Kelly Fraction"</em>.</p>
+
+<p>The Kelly Fraction is used in finance and investment. It's rather abstract and typically difficult to understand, but based on our understanding of ergodicity from this article, I believe we can reach a simple description.</p>
 
 <p>Let's slightly modify the game so that a player can choose the amount to bet on each round. In this new scenario, it's in fact possible for an individual player to "get access" to some of the ensemble gains. The optimal amount to bet is calculated by the Kelly Fraction:<br /><span class="math">KF = P/A - Q/B</span></p>
 
@@ -69,22 +358,20 @@ time: Jan 8, 2023
 
 <p>For our game, the Kelly Fraction is:<br /><span class="math">KF = 0.5/0.4 - 0.5/0.5 = 0.25</span></p>
 
-<p>Let's run the time average simulation again, but this time using the Kelly Fraction. Here we use a single player making a 25% bet in 10,000 rounds. The vertical axis shows wealth on log scale:</p>
+<p>To verify this formula, let's run the time average simulation again, but this time using the Kelly Fraction. Here we use a single player making a 25% bet in 10,000 rounds. The vertical axis shows wealth on log scale:</p>
 
 <div id="kellySimulation" class="graph"></div>
 
-<button type="button" name="btnKellySimulation">
+<button class="reload-button" type="button" name="btnKellySimulation">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
     </svg>
-    <span>Run Simulation Again</span>
+    <span>Reload</span>
 </button>
 
 
-
-<h2>Simulation Code</h2>
+<h2>Further Reading</h2>
 
 <p>The simulation code is published here:<br />
     <a target="_blank" href="https://github.com/ekmwest/gbm-simulation/blob/main/app.js">https://github.com/ekmwest/gbm-simulation/blob/main/app.js</a>
 </p>
-
