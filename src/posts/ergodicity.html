@@ -291,7 +291,7 @@ time: Jan 13, 2023
 
 <p>I'm not that confident about the meanings and implications of ergodicity. But the concept is sufficiently counter-intuitive to make it interesting to me.</p>
 
-<p>In this article I'll try to explain ergodicity based on a simple game:</p>
+<p>In this article I'll try to explain ergodicity, as far as I understand it, based on a simple game:</p>
 
 <ol>
     <li>You have some amount of wealth.</li>
@@ -302,11 +302,11 @@ time: Jan 13, 2023
 
 
 
-<h2>Ensemble Average</h2>
+<h2>Ensemble Average — 5% Gain</h2>
 
-<p>First, let's see what happens on average when many players participate in the game. An average player should gain 5% wealth on each round (on each coin toss):<br /><span class="math">EA = (1.5 + 0.6) / 2 = 1.05</span></p>
+<p>First, let's see what happens, on average, when many players participate in the game. An average player should gain 5% wealth on each round (on each coin toss):<br /><span class="math">EA = (1.5 + 0.6) / 2 = 1.05</span></p>
 
-<p>Just to verify the formula, let's simulate an average player. Here we use 10,000 players (an ensemble) and run the game for 10 rounds. The vertical axis shows average wealth on a log scale:</p>
+<p>Just to verify this formula, let's simulate an average player. Here we use 10,000 players (an ensemble) and run the game for 10 rounds. The vertical axis shows average wealth on a log scale:</p>
 
 <div id="ensembleSimulation" class="graph"></div>
 
@@ -314,16 +314,16 @@ time: Jan 13, 2023
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
     </svg>
-    <span>Reload</span>
+    <span>Run New Simulation</span>
 </button>
 
 
 
-<h2>Time Average</h2>
+<h2>Time Average — 5% Loss</h2>
 
-<p>Now let's take the perspective of an individual player. An individual player should, on average, loose 5% wealth on each round:<br /><span class="math">TA = (1.5 * 0.6) / 2 = 0.95</span></p>
+<p>Now, let's take the perspective of an individual player. An individual player should, on average, loose 5% wealth on each round:<br /><span class="math">TA = (1.5 * 0.6) / 2 = 0.95</span></p>
 
-<p>To verify the formula, let's simulatate an individual player. Here we use one single player and run the game 10,000 rounds. The vertical axis shows wealth on a log scale:</p>
+<p>To verify this formula, let's simulatate an individual player. Here we use one single player and run the game 10,000 rounds. The vertical axis shows wealth on a log scale:</p>
 
 <div id="timeSimulation" class="graph"></div>
 
@@ -331,7 +331,7 @@ time: Jan 13, 2023
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
     </svg>
-    <span>Reload</span>
+    <span>Run New Simulation</span>
 </button>
 
 
@@ -342,7 +342,7 @@ time: Jan 13, 2023
 
 <p>Based on this definition, we can conclude that our game is non-ergodic — the ensemble average is <strong>not</strong> equal to the time average.</p>
 
-<p>What I find counter-intuitive is that sometimes it's rational for a group (an ensemble) to participate in a game, but at the same time, irrational for an individual player. How can this be? I understand the math, but on an emotional level, it seems paradoxical.</p>
+<p>What I find counter-intuitive, is that sometimes it's rational for a group (an ensemble) to participate in a game, but at the same time, irrational for an individual player. How can this be? I understand the math, but on an emotional level, it seems paradoxical.</p>
 
 
 
@@ -352,13 +352,13 @@ time: Jan 13, 2023
 
 <p>The Kelly Fraction is used in finance and investment. It's rather abstract and typically difficult to understand, but based on our understanding of ergodicity from this article, I believe we can reach a simple description.</p>
 
-<p>Let's slightly modify the game so that a player can choose the amount to bet on each round. In this new scenario, it's in fact possible for an individual player to "get access" to some of the ensemble gains. The optimal amount to bet is calculated by the Kelly Fraction:<br /><span class="math">KF = P/A - Q/B</span></p>
+<p>Let's slightly modify the game so that a player can choose the amount to bet on each round. In this new scenario, it is in fact possible for an individual player to "get access" to some of the ensemble gains. The optimal amount to bet is calculated by the Kelly Fraction:<br /><span class="math">KF = P/A - Q/B</span></p>
 
 <p><strong>P</strong> = Probabilty of win<br /><strong>Q</strong> = Probability of loss<br /><strong>A</strong> = Fraction lost on loss<br /><strong>B</strong> = Fraction gained on win</p>
 
 <p>For our game, the Kelly Fraction is:<br /><span class="math">KF = 0.5/0.4 - 0.5/0.5 = 0.25</span></p>
 
-<p>To verify this formula, let's run the time average simulation again, but this time using the Kelly Fraction. Here we use a single player making a 25% bet in 10,000 rounds. The vertical axis shows wealth on log scale:</p>
+<p>To verify this formula, let's run the time average simulation again, but this time using the Kelly Fraction. Here we use a single player making a 25% bet on 10,000 rounds. The vertical axis shows wealth on log scale:</p>
 
 <div id="kellySimulation" class="graph"></div>
 
@@ -366,12 +366,25 @@ time: Jan 13, 2023
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
     </svg>
-    <span>Reload</span>
+    <span>Run New Simulation</span>
 </button>
+
 
 
 <h2>Further Reading</h2>
 
-<p>The simulation code is published here:<br />
-    <a target="_blank" href="https://github.com/ekmwest/gbm-simulation/blob/main/app.js">https://github.com/ekmwest/gbm-simulation/blob/main/app.js</a>
+<p>Founder and investor Taylor Pearson have put together a great description of ergodicity in this article (~4000 words):<br>
+    <a target="_blank" href="https://taylorpearson.me/ergodicity/">A Big Little Idea Called Ergodicity</a>
+</p>
+
+<p>Advertisement executive Rory Sutherland have analyzed how ergodicity affects marketing and economics (20 min):<br>
+    <a target="_blank" href="https://www.youtube.com/watch?v=FYtp6rDAmoU">A creative springboard to a better kind of economics</a>
+</p>
+
+<p>Theoretical Physicist Ph.D. Ole Peters have explained the concept of ergodicity in multiple articles, tweets, and articles. Here's one of his best TED Talks (16 min):<br>
+    <a target="_blank" href="https://www.youtube.com/watch?v=LGqOH3sYmQA">Time and Chance</a>
+</p>
+
+<p>The simulation code used in this article can be found here:<br />
+    <a target="_blank" href="https://github.com/ekmwest/ekmwest-site/blob/master/src/posts/ergodicity.html">github.com/ekmwest/ekmwest-site/src/posts/ergodicity.html</a>
 </p>
