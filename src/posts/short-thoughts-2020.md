@@ -6,7 +6,7 @@ time: Dec 31, 2020
 
 <div class="short-thoughts">
 
-Stone and chisel will produce sharp writing.
+Stone and chisel creates sharp letters.
 
 When curiosity is key, expertise is a barrier.
 
@@ -18,7 +18,7 @@ Trial-and-error requires speed. If the process is slow, you need intelligence.
 
 What should you discuss with your customers? Solutions or problems?
 
-When you say "we", are you trying to include or exclude?
+When you say "we", do you really know if you're trying to include or exclude?
 
 It is easier to graduate from junior to senior, than to graduate from senior to master. Vanity is a bigger hurdle than ignorance.
 

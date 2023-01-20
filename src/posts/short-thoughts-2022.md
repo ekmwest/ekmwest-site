@@ -6,27 +6,27 @@ time: Dec 31, 2022
 
 <div class="short-thoughts">
 
-Facts can conceal the truth.
+Facts can conceal truth.
 
-Opinions are usually just theories clouded by politics.
+Opinions are theories clouded by politics.
 
-Originality is important for branding, but harmful for usability.
+Originality is good for branding, and harmful for usability.
 
-Are you trying to create conformity or creativity?
+Do you really know if you're encouraging confirmity or creativity? 
 
 You don't understand what you see. You see what you understand.
 
 Prototype to learn.
 
-Don't try to figure it out. Try to figure out how to figure it out.
+Don't try to figure it out. Instead, try to figure out how to figure it out.
 
 It's not about how much you know, it's about how fast you learn. Compete with kids instead of experts.
 
 Everything is good in some contexts, and bad in others.
 
-The first question should always be: What is the right question?
+The first question must always be: What's the right question?
 
-There are two kind of designers — those that care about users, and those that <em>believe</em> they care about users. If you're certain that you're of the first kind, then you're probably not.
+There are two kind of designers — those that care about users, and those that <em>believe</em> they care about users. If you're certain that you're of the first kind, you're probably not.
 
 Always gather more perspectives.
 
