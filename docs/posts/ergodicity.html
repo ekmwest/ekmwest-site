@@ -57,6 +57,7 @@
 
         // Exports
         window.ekmwest.toggleDarkMode = toggleDarkMode;
+        window.ekmwest.isDarkMode = isDarkMode;
 
     })();
 </script>
@@ -251,7 +252,7 @@
         ===================================================================== */
 
     function createChartOptions(title, ticks) {
-        const textColor = isDarkMode() ? '#fff' : '#000';
+        const textColor = ekmwest.isDarkMode() ? '#fff' : '#000';
 
         return {
             title: title,
