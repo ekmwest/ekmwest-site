@@ -18,7 +18,7 @@ Don't remember to say thank you. Remember to be greateful.
 
 You can't wake someone who's pretending to be asleep.
 
-Creativity comes from friction, limitations, and troubles. What would you create if there were no needs and no problems?
+Creativity comes from friction, limitations, and troubles. What would you create if there were no needs or problems?
 
 Telling others to wake up doesn't mean you're not sleeping.
 

@@ -10,7 +10,7 @@ Facts can conceal truth.
 
 Opinions are theories clouded by politics.
 
-Originality is good for branding, and harmful for usability.
+Originality is good for branding, but harmful for usability.
 
 Do you really know if you're encouraging confirmity or creativity? 
 
@@ -18,7 +18,7 @@ You don't understand what you see. You see what you understand.
 
 Prototype to learn.
 
-Don't try to figure it out. Instead, try to figure out how to figure it out.
+Don't try to figure it out. Try to figure out how to figure it out.
 
 It's not about how much you know, it's about how fast you learn. Compete with kids instead of experts.
 
