@@ -5,7 +5,7 @@ time: XX, 2023
 robots: noindex
 ---
 
-If you work in a complex environment like business, product design, or finance, you shouldn't trust your intuition.
+If you work in a complex environment like business, product design, or finance, you shouldn't trust your intuition. 
 
 Intuition is an efficient unconsious pattern reconition mechanism.
 
