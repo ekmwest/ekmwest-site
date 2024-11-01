@@ -31,7 +31,7 @@ body {
     color: var(--text-color);
     line-height: 1.5;
     margin: 0;
-    padding: 0 18px 128px;
+    padding: 0 18px 96px;
     overflow-y: scroll;
     transition-property: color, background-color;
     transition-duration: .2s;
@@ -239,19 +239,20 @@ a, a:visited {
    Lightning
    ========================================================================== */
 
-.lightning {
+p.lightning {
     font-size: 1.2em;
-    margin: 1.1em 0;
+    margin-top: 2em;
+    margin-bottom: 0;
+    text-align: center;
 }
 
 .lightning svg {
     display: inline-block;
-    padding: .8em;
-    margin-left: -.8em;
+    padding: 1.5em;
 }
 
 .lightning svg:hover {
-    animation: 1.5s ease lightning;
+    animation: 1.4s ease lightning;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
 }
