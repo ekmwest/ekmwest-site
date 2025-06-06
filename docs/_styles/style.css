@@ -92,20 +92,14 @@ a, a:visited {
     cursor: pointer;
 }
 
-.toggle-dark-mode .sun {
-    display: block;
-}
-
-.dark .toggle-dark-mode .sun {
-    display: none;
-}
-
-.toggle-dark-mode .moon {
-    display: none;
-}
-
+.toggle-dark-mode .sun,
 .dark .toggle-dark-mode .moon {
     display: block;
+}
+
+.toggle-dark-mode .moon,
+.dark .toggle-dark-mode .sun {
+    display: none;
 }
 
 

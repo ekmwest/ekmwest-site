@@ -10,58 +10,8 @@
 <link rel="apple-touch-icon" href="/_images/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/_styles/style.css" />
-<script>
-    (function () {
+<script src="/_scripts/dark-mode.js"></script>
 
-        // Ensure global object
-        window.ekmwest = window.ekmwest || {};
-
-
-        // Set Initial Dark Mode
-        setDarkMode(isDarkMode());
-
-
-        // Detect Dark Mode
-        function isDarkMode() {
-            // 1. Selected by user
-            if (localStorage.getItem('dark-mode') !== null) {
-                return localStorage.getItem('dark-mode') === 'true';
-            }
-
-            // 2. Browser default
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                return true;
-            }
-
-            // 3. Site default
-            return false;
-        }
-
-
-        // Set Dark Mode
-        function setDarkMode(setDark) {
-            if (setDark) {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('dark-mode', 'true');
-            } else {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('dark-mode', 'false');
-            }
-        }
-
-
-        // Toggle Dark Mode
-        function toggleDarkMode() {
-            setDarkMode(!isDarkMode());
-        }
-
-
-        // Exports
-        window.ekmwest.toggleDarkMode = toggleDarkMode;
-        window.ekmwest.isDarkMode = isDarkMode;
-
-    })();
-</script>
 </head>
 
 <body>
