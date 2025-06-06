@@ -54,7 +54,7 @@ Is design about adding or removing?
 
 Assessing a set of candidates if different from assessing an individual candidate. You can't use the same criteria.
 
-Spending time on analytical problems will prevent you from understanding customers.
+Spending time on analytical problems will reduce your ability to understand customers.
 
 What you consider insightful is often just cleverly worded ideas that you already believe. Perhaps you imagine yourself using those words. Or perhaps you feel validated that a well spoken person express the same ideas that you believe.
 
