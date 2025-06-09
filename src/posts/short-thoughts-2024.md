@@ -18,15 +18,9 @@ Saying *"trust me"* is somewhat suspicious.
 
 Asking for transparency is a statement of distrust.
 
-You often make up ideas about others to feel good about yourself.
-
 A good designer understands that a rock can be a hammer.
 
 Are you designing letters or paragraphs? Be mindful of the scope.
-
-No one ever thought that Lucifer and Vesper were different wanderers.
-
-The number of "likes" is not the same as the number of readers that liked or enjoyed your post.
 
 Don't be confident, because it makes you look for advice on what to do. You should be looking for advice on what to avoid.
 
@@ -52,10 +46,14 @@ A good designer takes freedom from herself and gives it to the user.
 
 Is design about adding or removing?
 
-Assessing a set of candidates if different from assessing an individual candidate. You can't use the same criteria.
+Assessing a set of candidates is different from assessing an individual candidate. You can't use the same criteria.
 
 Spending time on analytical problems will reduce your ability to understand customers.
 
 What you consider insightful is often just cleverly worded ideas that you already believe. Perhaps you imagine yourself using those words. Or perhaps you feel validated that a well spoken person express the same ideas that you believe.
+
+No one ever thought that Lucifer and Vesper were different wanderers.
+
+You often make up ideas about others to feel good about yourself.
 
 </div>
