@@ -12,9 +12,9 @@ In order to see, you must be silent.
 
 Plans, promises, predictions. So often confused.
 
-Are you trying to move people? Or are you trying to let people move?
+Are you trying to move people? Or trying to let people move?
 
-Saying *"trust me"* is somewhat suspicious.
+Saying *"trust me"* is a bit suspicious.
 
 Asking for transparency is a statement of distrust.
 
@@ -28,11 +28,11 @@ Learning is a living process, and from that point of view, talking is better tha
 
 Socrates would've preferred Zoom over Slack.
 
-If you pretend to be weird or stupid, no one will suspect you. Because why would anyone want to be precieved as weird or stupid?!
+If you pretend to be weird or stupid, no one will suspect you. Because why would anyone want to be precieved as weird or stupid?
 
-The Dao that can be told, is not the true Dao.
+The Dao that can be told is not the true Dao.
 
-Thinking is hard work. That's why *"trust your intuition"* is a such a popular advice.
+Thinking is truly hard work. That's why *"trust your intuition"* is a such a popular advice.
 
 People that don't have the stamina to do the hard work of thinking, often call for urgency, or try to frame the situation as a crisis.
 
@@ -40,17 +40,17 @@ Intelligent people are attracted to universal principles that can be applied to 
 
 Use languages and protocols to invite. Use frameworks and libraries to exclude.
 
-A well designed product can be understood with intelligence and intuition. Specialized knowledge is not needed.
+A good product can be used and understood without reading a manual. Intelligence and intuition is enough.
 
 A good designer takes freedom from herself and gives it to the user.
 
 Is design about adding or removing?
 
-Assessing a set of candidates is different from assessing an individual candidate. You can't use the same criteria.
+Assessing an individual candidate is different from assessing a group of candidates. You can't use the same criteria.
 
-Spending time on analytical problems will reduce your ability to understand customers.
+Spending time on analytical problems will reduce your ability to understand users and customers.
 
-What you consider insightful is often just cleverly worded ideas that you already believe. Perhaps you imagine yourself using those words. Or perhaps you feel validated that a well spoken person express the same ideas that you believe.
+What you consider insightful is often just cleverly worded ideas that you already believe. Perhaps you imagine yourself using those words. Or perhaps you feel validated when a well spoken person express the same ideas as yours.
 
 No one ever thought that Lucifer and Vesper were different wanderers.
 

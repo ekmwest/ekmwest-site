@@ -14,6 +14,8 @@ Curiosity is not about asking questions. It's about seeking answers.
 
 Great design is not created. It's discovered.
 
+Art is not finished. It's abandoned.
+
 The unsung hero that you read about, is not an unsung hero.
 
 You want to trust your intuition because your're afraid of thinking.
@@ -30,14 +32,12 @@ Reduce the cost of making mistakes!
 
 Serious work requires humor.
 
-Every great story has a good story within it.
+Every great story has a story within it.
 
 The auteur asserts his vision upon reality. The master asserts reality upon himself.
 
-Art is not finished. It's abandoned.
+Freedom and independence are different things.
 
-Freedom and independence are distinct concepts.
-
-Being dependent on others can give you a lot of freedom.
+Being dependent can give you a lot of freedom.
 
 </div>

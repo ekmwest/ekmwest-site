@@ -18,7 +18,7 @@ A system is complex (or not), in and of itself. But a system can also be judged 
 
 A solution is a piece that can only be found by exploring the puzzle.
 
-Being uncertain is a powerful skill.
+Staying uncertain is a powerful skill.
 
 Don't announce the answer. Show the path to the place where you found the question.
 
